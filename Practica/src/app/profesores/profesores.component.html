@@ -1,0 +1,25 @@
+<h3>Componente ProfesoresComponent:</h3>
+<div class="btn-group mx-2">
+    <input type="text" placeholder="introduce id" [(ngModel)]="inputIdGet"/>
+    <input type="button" class="btn btn-secondary" value="Get" (click)="get()"/>
+</div>
+<hr>
+<!-- <pre>
+    {{this.resultadoPeticion | json}}
+</pre> -->
+
+<div class="mx-2">
+    <ul>
+        <li *ngFor="let p of this.resultadoPeticion; let i=index">
+            Elemento {{i+1}}: <input type="button" class="btn btn-secondary" value="Mostrar en Información" [routerLink]="['/informacion']"/><br>
+            ID: {{p.id}}<br>
+            USUARIO: {{p.usuario}}<br>
+            EMAIL: {{p.email}}<br>
+            MÓDULO: {{p.modulo}}<br>
+            HORAS: {{p.horas}}<br>
+            FOTO: {{p.foto}}<br>
+        </li>
+    </ul>
+</div>
+<app-datos-profesores>
+</app-datos-profesores>

@@ -1,0 +1,11 @@
+<p>alumnos works!</p>
+<div class="btn-group mx-2">
+    <input type="text" placeholder="introduce id" [(ngModel)]="inputIdPost"/>
+    <input type="text" placeholder="introduce usuario" [(ngModel)]="inputUsuarioPost"/>
+    <input type="text" placeholder="introduce email" [(ngModel)]="inputEmailPost"/>
+    <input type="text" placeholder="introduce edad" [(ngModel)]="inputEdadPost"/>
+    <input type="button" class="btn btn-secondary" value="Post" (click)="post()"/>
+</div>
+<pre>
+    {{this.resultadoPeticion | json}}
+</pre>
